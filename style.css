@@ -1,5 +1,6 @@
 :root{
     --main-color: #059669;
+    --secondary-color: rgb(3, 3, 102);
 }
 
 body{
@@ -10,13 +11,9 @@ body{
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
 
+
 }
-header{
-    display: flex;
-    background-color: var(--main-color);
-    padding: 0.5rem;
-    
-}
+
 
 .picture{
     width: 350px;
@@ -33,7 +30,7 @@ footer{
     gap: 20px;
 }
 
-.picture-pic{
+.picture1{
     width: 100%;
     position: relative;
 }
@@ -43,20 +40,21 @@ footer{
     text-align: center;
 }
 
-.picture-pic2{
-    width: 200px;
+.picture2{
+    width: 250px;
     object-fit: cover;
 }
 
 .about-me{
-    background-color: #0d9488;
+    background-color: rgb(31, 6, 123);
     width: 100%;
     text-align: center;
     color: white;
     font-weight: bold;
+    
 }
 .project-pic{
-        width: 100%;
+     width: 100%;
 }
 
 .project-div{
@@ -102,11 +100,63 @@ main{
     margin-bottom: 2rem;
 }
 
+i{
+    font-size: 3rem;
+}
+a:link {
+      text-decoration: none;
+      color: white;
+}
+
+a:visited {
+      text-decoration: none;
+      color: white;
+}
+
+a:hover {
+      text-decoration: none;
+      color: white;
+}
+
+a:active {
+      text-decoration: none;
+      color: white;
+}
+
+.bg{
+    background-color: var(--secondary-color);
+    position: absolute;
+    width: 100%;
+    transform: skewY(-9deg);
+    bottom: 40%;
+    right: 0%;
+    height: 100%;
+}
+.wrapper{
+    display: flex;
+    background-color: var(--main-color);
+    padding: 0.5rem;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+footer{
+    background-color: var(--secondary-color);
+    color: white;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 @media (max-width: 600px){
     .container{
         grid-template-columns: 1fr;
     }
-    header{
+    .wrapper{
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -124,13 +174,16 @@ main{
         bottom: 10px;
         left: 10%;
     }
+    .footer-data{
+        text-align: center;
+    }
 }
 
 @media (min-width: 601px) and (max-width: 1024px){
     .container{
         grid-template-columns: repeat(2, 1fr);
     }
-    .picture-pic{
+    .picture1{
         width: 100%;
         position: relative;
         left: 40%;
@@ -139,17 +192,18 @@ main{
 
     .my-name{
         position: absolute;
-        bottom: 150px;
-        left: 120%;
-        
+        bottom: 1px;
+        left: 60%;
+        font-size: 1.2rem;
     }
-    header{
+    .wrapper{
         padding: 1.5rem;
+        gap: 5rem;
     }
     .about-me{
+        height: 100%;
         position: relative;
-        top: 20%;
-        height: 70%;
+        top: 22.5%;
     }
 
     .project-name{
@@ -174,8 +228,10 @@ main{
         bottom: 10px;
         left: 10%;
     }
-    .picture-pic2{
+    .picture2{
         width: 300px;
     }
+
+    
    
 }
